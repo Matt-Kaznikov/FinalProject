@@ -9,3 +9,11 @@ Wilt Chamberlain, C, 1950's, Lakers, 31419
 Shaquille O'Neal, C, 1990's, Celtics, 28596
 Carmelo Anthony, SF, 2000's, Lakers, 28289
 Moses Malone, C, 1970's, Spurs, 27409
+
+#It still appears that you're in the preliminary stages of your project and that's ok!
+#I'm confused on what the rules of this guessing game is? Are you guessing the player based on the stats the program gives?
+#Is it like "Guess Who?" but for NBA players?
+
+#You can start by organizing what you have written so far with dictionaries 
+#as an example: player1 = {'Name':'Lebron', 'Position': 'SF', 'Era':'2000's', 'Team':'Lakers', 'Points': '38411'}
+#and then access each of the elements in the dictionary for the guessing game 
