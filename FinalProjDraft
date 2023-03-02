@@ -9,3 +9,20 @@ Wilt Chamberlain, C, 1950's, Lakers, 31419
 Shaquille O'Neal, C, 1990's, Celtics, 28596
 Carmelo Anthony, SF, 2000's, Lakers, 28289
 Moses Malone, C, 1970's, Spurs, 27409
+
+#It still appears that you're in the preliminary stages of your project and that's ok!
+#I'm confused on what the rules of this guessing game is? Are you guessing the player based on the stats the program gives?
+#Is it like "Guess Who?" but for NBA players?
+
+#You can start by organizing what you have written so far with dictionaries 
+#as an example: player1 = {'Name':'Lebron', 'Position': 'SF', 'Era':'2000', 'Team':'Lakers', 'Points': '38411'}
+#and then access each of the elements in the dictionary for the guessing game 
+
+#I'm not sure what kind of advice to give because the rules of the guessing game are unclear to me
+
+#if it's a "Guess Who?" style game, you can have the computer output "yes" or "no" based on the player's questions ("Did they score less than 30000 points?") until they guess the right name
+#you would need to use a lot of if/else statements 
+#other than that, I'm not sure how else to go on from there
+
+#if it's a guessing game where you guess the other attributes based on the player, then you would have the computer output a random player name and one of the attributes, e.g. guessing LeBron's Era
+#and then you can use an if/else statement and keys(), values() or items() commands to match with the player's guess to see if they're right or wrong
