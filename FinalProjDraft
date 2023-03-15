@@ -1,11 +1,53 @@
-Name, Position, Era, Team, Points
-Lebron, SF, 2000's, Lakers, 38411
-Kareem Abdul-Jabbar, C, 1960's, Lakers, 38387
-Karl Malone, PF, 1980's, Lakers, 36928
-Kobe Bryant, SG, 1990's, Lakers, 33643
-Michael Jordan, SG, 1980's, Wizards, 32292
-Dirk Nowitzki, PF, 1990's, Mavericks, 31560
-Wilt Chamberlain, C, 1950's, Lakers, 31419
-Shaquille O'Neal, C, 1990's, Celtics, 28596
-Carmelo Anthony, SF, 2000's, Lakers, 28289
-Moses Malone, C, 1970's, Spurs, 27409
+# Either i will have a pre determined player (Michael Jordan) or implement random..
+# for this case
+# guessing the points?
+import random 
+
+players = []
+with open("players.csv") as f:
+    next(f)
+    for line in f.readlines():
+        player = line.strip().split(", ")
+        print(player)
+        players.append(player)
+
+mystery_player = random.choice (players)
+
+
+def game(): 
+
+ points = int(input("Take a guess at how many points the mystery player has: ")) #choose player from given list above as first guess
+ if points < int(mystery_player[4]): #Assuming user's guess is a player above michael jordan
+    print("Good guess! However, the correct player's total number of points is more.")
+ elif points > int(mystery_player[4]):
+    print("Good Guess! However, the correct player's points is less.")
+ elif points == int(mystery_player[4]):
+    print("Phenomenal Guess! You guessed the correct number of points")
+
+#Guessing the correct position
+
+ position = str(input("Take a guess at the mystery players position: "))
+ if position == str(mystery_player[1]):
+    print("Congrats, you guessed the correct player's position!")
+ else:
+    print("Good Try! Unfortunately the position is something else. Try guessing the correct era!")
+
+#Guessing the era
+
+ era = int(input("Take a guess at what era the mystery player was drafted in: "))
+ if era < int(mystery_player[2]):
+    print("Good guess! However, the era of this player is higher")
+ elif era > int(mystery_player[2]):
+    print("Another good guess but this player's era is actually lower")
+ elif era == int(mystery_player[2]):
+    print("Yes! You guessed the correct era of the mystery player!")
+
+#Guessing correct team
+
+ name = str(input("Take your final guess at who the mystery player is: "))
+ if name == str(mystery_player[0]):
+    print("Congratulations on guessing the correct mystery player!")
+ else:
+    print("It is very unfortunate you did not guess the correct mystery player. \n The correct answer was " + str(mystery_player[0]) +  "The mystery player was drafted \n  by the " + str(mystery_player[3]) + " in the " + str(mystery_player[2]) + " The Mystery Player was \n a " + str(mystery_player[1]) + " who scored a total of " + str(mystery_player[4]) + " points and \n ended his career playing the game they loved! Thank \n you for playing this NBA mystery player guessing game! \n Hope you had fun! ")
+
+game()
